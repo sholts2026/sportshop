@@ -8,41 +8,63 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root{--g:#ff0000;--bg:#0a0a0a;--card:#161616;}
-        body{background:var(--bg);color:#fff;font-family:'DM Sans',sans-serif;margin:0;}
-        nav{display:flex;align-items:center;justify-content:center;padding:1rem;background:#000;border-bottom:1px solid #222;position:sticky;top:0;z-index:100;}
-        .logo{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--g);}
+        body{background:var(--bg);color:#fff;font-family:'DM Sans',sans-serif;margin:0;overflow-x:hidden;}
+        nav{display:flex;align-items:center;justify-content:center;padding:1.5rem;background:#000;border-bottom:2px solid var(--g);position:sticky;top:0;z-index:100;}
+        .logo{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--g);letter-spacing:2px;}
         .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:15px;padding:15px;}
-        .card{background:var(--card);border-radius:8px;overflow:hidden;border:1px solid #222;}
-        .card img{width:100%;aspect-ratio:1;object-fit:cover;display:block;}
-        .inf{padding:10px;text-align:center;}
-        .cn{font-size:0.85rem;height:2.5rem;overflow:hidden;margin-bottom:8px;}
-        .ab{width:100%;background:var(--g);color:#fff;border:none;padding:8px;font-weight:700;border-radius:4px;cursor:pointer;text-decoration:none;display:inline-block;}
+        .card{background:var(--card);border-radius:12px;overflow:hidden;border:1px solid #222;transition:transform 0.2s;}
+        .card:hover{transform:translateY(-5px);border-color:var(--g);}
+        .card img{width:100%;aspect-ratio:1/1.2;object-fit:cover;display:block;background:#111;}
+        .inf{padding:12px;text-align:center;}
+        .cn{font-size:0.85rem;font-weight:600;height:2.5rem;overflow:hidden;margin-bottom:10px;line-height:1.2;}
+        .ab{width:100%;background:var(--g);color:#fff;border:none;padding:10px;font-weight:700;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block;transition:0.3s;}
+        .ab:hover{background:#cc0000;}
     </style>
 </head>
 <body>
 
 <nav><div class="logo">SPORTKIT</div></nav>
+
 <div class="grid" id="mainGrid"></div>
 
 <script>
-    // --- כאן מדביקים את המוצרים מ-YUPOO ---
+    // --- כאן נמצא המלאי שלך. כדי להוסיף חולצות, פשוט מוסיפים שורות לרשימה הזו ---
     const products = [
         {
-            "name": "חולצת דוגמה (זה עובד!)",
+            "name": "Real Madrid Home 24/25",
             "image_url": "https://images.unsplash.com/photo-1521412644187-c49fa0b4e6a3?w=500",
-            "album_url": "https://google.com"
+            "album_url": "https://google.com/1"
+        },
+        {
+            "name": "Barcelona Away Kit",
+            "image_url": "https://images.unsplash.com/photo-1580087443467-2236514375ca?w=500",
+            "album_url": "https://google.com/2"
+        },
+        {
+            "name": "Manchester City Special",
+            "image_url": "https://images.unsplash.com/photo-1599408162489-0505efe3153b?w=500",
+            "album_url": "https://google.com/3"
+        },
+        {
+            "name": "Inter Miami - Messi 10",
+            "image_url": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=500",
+            "album_url": "https://google.com/4"
         }
-        // פשוט תוסיף כאן עוד מוצרים בהמשך...
     ];
 
     function loadSite() {
         const grid = document.getElementById('mainGrid');
+        if (products.length === 0) {
+            grid.innerHTML = "<p style='grid-column:1/-1;margin-top:50px;color:#666;'>המלאי מתעדכן... חזרו בקרוב!</p>";
+            return;
+        }
+        
         grid.innerHTML = products.map(p => `
             <div class="card">
                 <img src="${p.image_url}" referrerpolicy="no-referrer" onerror="this.src='https://via.placeholder.com/300?text=No+Image'">
                 <div class="inf">
                     <div class="cn">${p.name}</div>
-                    <a class="ab" href="https://wa.me/972501234567?text=${encodeURIComponent('אני רוצה להזמין: ' + p.name)}" target="_blank">הזמן בוואטסאפ</a>
+                    <a class="ab" href="https://wa.me/972501234567?text=${encodeURIComponent('היי, אני רוצה להזמין את: ' + p.name)}" target="_blank">הזמן בוואטסאפ</a>
                 </div>
             </div>
         `).join('');
