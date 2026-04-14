@@ -35,20 +35,20 @@
 <footer>© 2026 SPORTKIT - ALL RIGHTS RESERVED</footer>
 
 <script>
-    // רשימת המוצרים שהוצאת מה-Yupoo
+    // רשימת המוצרים עם פרוקסי לעקיפת חסימות תמונות
     const products = [
-        {"name":"AC Milan 26_27 Away Jersey","image_url":"https://photo.yupoo.com/abcd1234fei/419e02ff/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/232022390?uid=1"},
-        {"name":"2024 polo F1 Formula One","image_url":"https://photo.yupoo.com/abcd1234fei/cc1f4b43/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/232022377?uid=1"},
-        {"name":"Santander 26_27 Goalkeeper","image_url":"https://photo.yupoo.com/abcd1234fei/ed7ff6e2/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/232022353?uid=1"},
-        {"name":"Wales 150th Anniversary","image_url":"https://photo.yupoo.com/abcd1234fei/d2ae222e/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573450?uid=1"},
-        {"name":"Vancouver Whitecaps Away","image_url":"https://photo.yupoo.com/abcd1234fei/5b307392/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573443?uid=1"},
-        {"name":"Valencia 25_26 Away Jersey","image_url":"https://photo.yupoo.com/abcd1234fei/f446ab11/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573434?uid=1"},
-        {"name":"Universidad de Chile","image_url":"https://photo.yupoo.com/abcd1234fei/2dc94789/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573430?uid=1"},
-        {"name":"Sevilla 25_26 Goalkeeper","image_url":"https://photo.yupoo.com/abcd1234fei/1cc3ca38/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573417?uid=1"},
-        {"name":"Real Madrid Originals T-shirt","image_url":"https://photo.yupoo.com/abcd1234fei/0d939b52/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573404?uid=1"},
-        {"name":"Peru 2026 Away Jersey","image_url":"https://photo.yupoo.com/abcd1234fei/6c26e04b/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573387?uid=1"},
-        {"name":"Mexico 2026 Third Player","image_url":"https://photo.yupoo.com/abcd1234fei/a800f6bb/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573350?uid=1"},
-        {"name":"Japan 2026 GK Red","image_url":"https://photo.yupoo.com/abcd1234fei/0b050fac/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573321?uid=1"}
+        {"name":"AC Milan 26_27 Away Jersey","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/419e02ff/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/232022390?uid=1"},
+        {"name":"2024 polo F1 Formula One","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/cc1f4b43/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/232022377?uid=1"},
+        {"name":"Santander 26_27 Goalkeeper","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/ed7ff6e2/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/232022353?uid=1"},
+        {"name":"Wales 150th Anniversary","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/d2ae222e/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573450?uid=1"},
+        {"name":"Vancouver Whitecaps Away","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/5b307392/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573443?uid=1"},
+        {"name":"Valencia 25_26 Away Jersey","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/f446ab11/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573434?uid=1"},
+        {"name":"Universidad de Chile","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/2dc94789/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573430?uid=1"},
+        {"name":"Sevilla 25_26 Goalkeeper","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/1cc3ca38/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573417?uid=1"},
+        {"name":"Real Madrid Originals T-shirt","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/0d939b52/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573404?uid=1"},
+        {"name":"Peru 2026 Away Jersey","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/6c26e04b/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573387?uid=1"},
+        {"name":"Mexico 2026 Third Player","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/a800f6bb/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573350?uid=1"},
+        {"name":"Japan 2026 GK Red","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/0b050fac/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573321?uid=1"}
     ];
 
     function loadSite() {
