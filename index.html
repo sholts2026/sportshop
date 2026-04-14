@@ -4,67 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
-    <title>SportKit — חנות חולצות</title>
+    <title>SPORTKIT — חנות חולצות</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root{--g:#ff0000;--bg:#0a0a0a;--card:#161616;}
         body{background:var(--bg);color:#fff;font-family:'DM Sans',sans-serif;margin:0;overflow-x:hidden;}
-        nav{display:flex;align-items:center;justify-content:center;padding:1.5rem;background:#000;border-bottom:2px solid var(--g);position:sticky;top:0;z-index:100;}
-        .logo{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--g);letter-spacing:2px;}
-        .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:15px;padding:15px;}
-        .card{background:var(--card);border-radius:12px;overflow:hidden;border:1px solid #222;transition:transform 0.2s;}
+        nav{display:flex;flex-direction:column;align-items:center;padding:1.5rem;background:#000;border-bottom:2px solid var(--g);position:sticky;top:0;z-index:100;gap:10px;}
+        .logo{font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--g);letter-spacing:2px;line-height:1;}
+        .subtitle{font-size:0.9rem;color:#888;letter-spacing:1px;}
+        .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:15px;padding:15px;}
+        .card{background:var(--card);border-radius:12px;overflow:hidden;border:1px solid #222;transition:transform 0.2s;display:flex;flex-direction:column;}
         .card:hover{transform:translateY(-5px);border-color:var(--g);}
         .card img{width:100%;aspect-ratio:1/1.2;object-fit:cover;display:block;background:#111;}
-        .inf{padding:12px;text-align:center;}
-        .cn{font-size:0.85rem;font-weight:600;height:2.5rem;overflow:hidden;margin-bottom:10px;line-height:1.2;}
-        .ab{width:100%;background:var(--g);color:#fff;border:none;padding:10px;font-weight:700;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block;transition:0.3s;}
-        .ab:hover{background:#cc0000;}
+        .inf{padding:12px;text-align:center;flex-grow:1;display:flex;flex-direction:column;justify-content:space-between;}
+        .cn{font-size:0.85rem;font-weight:600;height:2.6rem;overflow:hidden;margin-bottom:12px;line-height:1.3;color:#eee;}
+        .ab{width:100%;background:var(--g);color:#fff;border:none;padding:10px 0;font-weight:700;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block;transition:0.3s;font-size:0.9rem;}
+        .ab:hover{background:#cc0000;box-shadow:0 0 15px rgba(255,0,0,0.3);}
+        footer{padding:2rem;text-align:center;color:#444;font-size:0.8rem;border-top:1px solid #111;}
     </style>
 </head>
 <body>
 
-<nav><div class="logo">SPORTKIT</div></nav>
+<nav>
+    <div class="logo">SPORTKIT</div>
+    <div class="subtitle">PREMIUM JERSEY COLLECTION</div>
+</nav>
 
 <div class="grid" id="mainGrid"></div>
 
+<footer>© 2026 SPORTKIT - ALL RIGHTS RESERVED</footer>
+
 <script>
-    // --- כאן נמצא המלאי שלך. כדי להוסיף חולצות, פשוט מוסיפים שורות לרשימה הזו ---
+    // רשימת המוצרים שהוצאת מה-Yupoo
     const products = [
-        {
-            "name": "Real Madrid Home 24/25",
-            "image_url": "https://images.unsplash.com/photo-1521412644187-c49fa0b4e6a3?w=500",
-            "album_url": "https://google.com/1"
-        },
-        {
-            "name": "Barcelona Away Kit",
-            "image_url": "https://images.unsplash.com/photo-1580087443467-2236514375ca?w=500",
-            "album_url": "https://google.com/2"
-        },
-        {
-            "name": "Manchester City Special",
-            "image_url": "https://images.unsplash.com/photo-1599408162489-0505efe3153b?w=500",
-            "album_url": "https://google.com/3"
-        },
-        {
-            "name": "Inter Miami - Messi 10",
-            "image_url": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=500",
-            "album_url": "https://google.com/4"
-        }
+        {"name":"AC Milan 26_27 Away Jersey","image_url":"https://photo.yupoo.com/abcd1234fei/419e02ff/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/232022390?uid=1"},
+        {"name":"2024 polo F1 Formula One","image_url":"https://photo.yupoo.com/abcd1234fei/cc1f4b43/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/232022377?uid=1"},
+        {"name":"Santander 26_27 Goalkeeper","image_url":"https://photo.yupoo.com/abcd1234fei/ed7ff6e2/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/232022353?uid=1"},
+        {"name":"Wales 150th Anniversary","image_url":"https://photo.yupoo.com/abcd1234fei/d2ae222e/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573450?uid=1"},
+        {"name":"Vancouver Whitecaps Away","image_url":"https://photo.yupoo.com/abcd1234fei/5b307392/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573443?uid=1"},
+        {"name":"Valencia 25_26 Away Jersey","image_url":"https://photo.yupoo.com/abcd1234fei/f446ab11/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573434?uid=1"},
+        {"name":"Universidad de Chile","image_url":"https://photo.yupoo.com/abcd1234fei/2dc94789/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573430?uid=1"},
+        {"name":"Sevilla 25_26 Goalkeeper","image_url":"https://photo.yupoo.com/abcd1234fei/1cc3ca38/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573417?uid=1"},
+        {"name":"Real Madrid Originals T-shirt","image_url":"https://photo.yupoo.com/abcd1234fei/0d939b52/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573404?uid=1"},
+        {"name":"Peru 2026 Away Jersey","image_url":"https://photo.yupoo.com/abcd1234fei/6c26e04b/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573387?uid=1"},
+        {"name":"Mexico 2026 Third Player","image_url":"https://photo.yupoo.com/abcd1234fei/a800f6bb/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573350?uid=1"},
+        {"name":"Japan 2026 GK Red","image_url":"https://photo.yupoo.com/abcd1234fei/0b050fac/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573321?uid=1"}
     ];
 
     function loadSite() {
         const grid = document.getElementById('mainGrid');
-        if (products.length === 0) {
-            grid.innerHTML = "<p style='grid-column:1/-1;margin-top:50px;color:#666;'>המלאי מתעדכן... חזרו בקרוב!</p>";
-            return;
-        }
-        
         grid.innerHTML = products.map(p => `
             <div class="card">
-                <img src="${p.image_url}" referrerpolicy="no-referrer" onerror="this.src='https://via.placeholder.com/300?text=No+Image'">
+                <img src="${p.image_url}" referrerpolicy="no-referrer" loading="lazy" onerror="this.src='https://via.placeholder.com/300?text=Image+Error'">
                 <div class="inf">
                     <div class="cn">${p.name}</div>
-                    <a class="ab" href="https://wa.me/972501234567?text=${encodeURIComponent('היי, אני רוצה להזמין את: ' + p.name)}" target="_blank">הזמן בוואטסאפ</a>
+                    <a class="ab" href="https://wa.me/972501234567?text=${encodeURIComponent('היי, אני רוצה להזמין: ' + p.name + '\nלינק לאלבום: ' + p.album_url)}" target="_blank">הזמן בוואטסאפ</a>
                 </div>
             </div>
         `).join('');
