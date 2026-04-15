@@ -35,27 +35,33 @@
 <footer>© 2026 SPORTKIT - ALL RIGHTS RESERVED</footer>
 
 <script>
-    // רשימת המוצרים עם פרוקסי לעקיפת חסימות תמונות
+    // רשימת מוצרים שחולצה מהקובץ ששלחת עם עקיפת חסימה חזקה
     const products = [
-        {"name":"AC Milan 26_27 Away Jersey","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/419e02ff/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/232022390?uid=1"},
-        {"name":"2024 polo F1 Formula One","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/cc1f4b43/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/232022377?uid=1"},
-        {"name":"Santander 26_27 Goalkeeper","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/ed7ff6e2/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/232022353?uid=1"},
-        {"name":"Wales 150th Anniversary","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/d2ae222e/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573450?uid=1"},
-        {"name":"Vancouver Whitecaps Away","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/5b307392/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573443?uid=1"},
-        {"name":"Valencia 25_26 Away Jersey","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/f446ab11/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573434?uid=1"},
-        {"name":"Universidad de Chile","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/2dc94789/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573430?uid=1"},
-        {"name":"Sevilla 25_26 Goalkeeper","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/1cc3ca38/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573417?uid=1"},
-        {"name":"Real Madrid Originals T-shirt","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/0d939b52/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573404?uid=1"},
-        {"name":"Peru 2026 Away Jersey","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/6c26e04b/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573387?uid=1"},
-        {"name":"Mexico 2026 Third Player","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/a800f6bb/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573350?uid=1"},
-        {"name":"Japan 2026 GK Red","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/0b050fac/medium.jpg","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573321?uid=1"}
+        {"name":"AC Milan 26_27 Away Jersey S-4XL","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/419e02ff/medium.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/232022390?uid=1"},
+        {"name":"2024 polo F1 Formula One S-5XL","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/cc1f4b43/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/232022377?uid=1"},
+        {"name":"Santander 26_27 113th Anniversary","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/ed7ff6e2/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/232022353?uid=1"},
+        {"name":"Wales 150th Anniversary Edition","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/d2ae222e/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573450?uid=1"},
+        {"name":"Vancouver Whitecaps 26_27 Away","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/5b307392/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573443?uid=1"},
+        {"name":"Valencia 25_26 Away Jersey S-4XL","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/f446ab11/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573434?uid=1"},
+        {"name":"Universidad de Chile Originals","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/2dc94789/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573430?uid=1"},
+        {"name":"Sevilla 25_26 Goalkeeper Pink","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/1cc3ca38/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573417?uid=1"},
+        {"name":"Real Madrid Originals T-shirt","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/0d939b52/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573404?uid=1"},
+        {"name":"Peru 2026 Away Jersey S-4XL","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/6c26e04b/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573387?uid=1"},
+        {"name":"Mexico 2026 Third Player Version","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/a800f6bb/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573350?uid=1"},
+        {"name":"Japan 2026 GK - Red Long-Sleeved","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/0b050fac/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573321?uid=1"},
+        {"name":"Ireland 26_27 Commemorative Green","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/8eff8919/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573287?uid=1"},
+        {"name":"Internacional 26_27 Training","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/4fcaf49b/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573275?uid=1"},
+        {"name":"Hamburger SV 25_26 Special Edition","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/8e788115/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573268?uid=1"},
+        {"name":"France 2026 Away Player Version","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/53f7c194/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573229?uid=1"},
+        {"name":"England 2026 Away Player Version","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/6c870e23/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573201?uid=1"},
+        {"name":"Colo Colo Originals T-shirt White","image_url":"https://images.weserv.nl/?url=photo.yupoo.com/abcd1234fei/d49cad9e/small.jpg&default=https://via.placeholder.com/300?text=No+Image","album_url":"https://abcd1234fei.x.yupoo.com/albums/230573174?uid=1"}
     ];
 
     function loadSite() {
         const grid = document.getElementById('mainGrid');
         grid.innerHTML = products.map(p => `
             <div class="card">
-                <img src="${p.image_url}" referrerpolicy="no-referrer" loading="lazy" onerror="this.src='https://via.placeholder.com/300?text=Image+Error'">
+                <img src="${p.image_url}" referrerpolicy="no-referrer" loading="lazy">
                 <div class="inf">
                     <div class="cn">${p.name}</div>
                     <a class="ab" href="https://wa.me/972501234567?text=${encodeURIComponent('היי, אני רוצה להזמין: ' + p.name + '\nלינק לאלבום: ' + p.album_url)}" target="_blank">הזמן בוואטסאפ</a>
